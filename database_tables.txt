@@ -1,0 +1,7 @@
+
+// scoreboards index
+CREATE TABLE `scoreboard`.`scoreboards` ( `id` VARCHAR(255) NOT NULL , `secret` VARCHAR(255) NOT NULL ) ENGINE = InnoDB;
+
+
+// scores table
+CREATE TABLE `scoreboard`.`scores` ( `id` INT(255) NOT NULL AUTO_INCREMENT , `scoreboard` VARCHAR(255) NOT NULL , `name` VARCHAR(255) NOT NULL , `score` INT(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

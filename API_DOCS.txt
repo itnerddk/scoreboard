@@ -1,0 +1,71 @@
+get /scoreboard/api/getNewScoreboard
+
+will return scoreboard id, and your secret for reseting the scoreboard
+Note: this is human readable only
+
+
+
+get /scoreboard/api/clearScoreboard?id=[your id]&secret=[your secret]
+
+will clean the scoreboard (will need secret so anyone cant delete it)
+
+inputs:
+* id: your scoreboards id
+* secret: the secret you got, when the scoreboard was created!
+
+outputs:
+* "Done!" will return if successful
+
+
+
+get /scoreboard/api/submitScore?id=[your id]&name=[name]&score=[the score]
+
+inputs:
+* id: your scoreboards id
+* name: the name of the player, or player input name
+* score: the score to enter, (int only)
+
+outputs:
+* "Done!" will return when added
+
+
+
+
+get /scoreboard/api/getTop3?id=[your id]
+
+inputs:
+* id: your scoreboard id
+
+outputs:
+* json array, with place, name and score
+
+sample output:
+{"1":{"name":"Mikkel","score":2147483647},"2":{"name":"seje reje","score":2147483647},"3":{"name":"seje reje","score":123324234}}
+
+
+
+
+get /scoreboard/api/getTop5?id=[your id]
+
+inputs:
+* id: your scoreboard id
+
+outputs:
+* json array, with place, name and score
+
+sample output:
+{"1":{"name":"Mikkel","score":2147483647},"2":{"name":"seje reje","score":2147483647},"3":{"name":"seje reje","score":123324234}}
+
+
+
+
+get /scoreboard/api/getTop10?id=[your id]
+
+inputs:
+* id: your scoreboard id
+
+outputs:
+* json array, with place, name and score
+
+sample output:
+{"1":{"name":"Mikkel","score":2147483647},"2":{"name":"seje reje","score":2147483647},"3":{"name":"seje reje","score":123324234}}
